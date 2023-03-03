@@ -24,7 +24,7 @@ SET default_table_access_method = heap;
 
 --
 -- TOC entry 211 (class 1259 OID 35291)
--- Name: sessions; Type: TABLE; Schema: public; Owner: pgroot
+-- Name: sessions; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.sessions (
@@ -36,11 +36,11 @@ CREATE TABLE public.sessions (
 );
 
 
-ALTER TABLE public.sessions OWNER TO pgroot;
+ALTER TABLE public.sessions OWNER TO postgres;
 
 --
 -- TOC entry 210 (class 1259 OID 35284)
--- Name: shortens; Type: TABLE; Schema: public; Owner: pgroot
+-- Name: shortens; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.shortens (
@@ -53,11 +53,11 @@ CREATE TABLE public.shortens (
 );
 
 
-ALTER TABLE public.shortens OWNER TO pgroot;
+ALTER TABLE public.shortens OWNER TO postgres;
 
 --
 -- TOC entry 209 (class 1259 OID 35278)
--- Name: users; Type: TABLE; Schema: public; Owner: pgroot
+-- Name: users; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.users (
@@ -69,7 +69,7 @@ CREATE TABLE public.users (
 );
 
 
-ALTER TABLE public.users OWNER TO pgroot;
+ALTER TABLE public.users OWNER TO postgres;
 
 -- Completed on 2023-03-03 14:21:43 UTC
 
