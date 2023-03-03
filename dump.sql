@@ -5,7 +5,7 @@
 -- Dumped from database version 14.4 (Debian 14.4-1.pgdg110+1)
 -- Dumped by pg_dump version 14.5
 
--- Started on 2023-03-03 14:21:43 UTC
+-- Started on 2023-03-03 14:40:34 UTC
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -24,7 +24,7 @@ SET default_table_access_method = heap;
 
 --
 -- TOC entry 211 (class 1259 OID 35291)
--- Name: sessions; Type: TABLE; Schema: public; Owner: postgres
+-- Name: sessions; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.sessions (
@@ -36,11 +36,9 @@ CREATE TABLE public.sessions (
 );
 
 
-ALTER TABLE public.sessions OWNER TO postgres;
-
 --
 -- TOC entry 210 (class 1259 OID 35284)
--- Name: shortens; Type: TABLE; Schema: public; Owner: postgres
+-- Name: shortens; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.shortens (
@@ -53,11 +51,9 @@ CREATE TABLE public.shortens (
 );
 
 
-ALTER TABLE public.shortens OWNER TO postgres;
-
 --
 -- TOC entry 209 (class 1259 OID 35278)
--- Name: users; Type: TABLE; Schema: public; Owner: postgres
+-- Name: users; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.users (
@@ -69,9 +65,7 @@ CREATE TABLE public.users (
 );
 
 
-ALTER TABLE public.users OWNER TO postgres;
-
--- Completed on 2023-03-03 14:21:43 UTC
+-- Completed on 2023-03-03 14:40:34 UTC
 
 --
 -- PostgreSQL database dump complete
