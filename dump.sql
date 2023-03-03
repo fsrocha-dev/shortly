@@ -64,7 +64,7 @@ CREATE TABLE public.shortens (
     "userId" integer NOT NULL,
     "createdAt" timestamp without time zone DEFAULT now() NOT NULL,
     views integer DEFAULT 0 NOT NULL
-);
+)
 
 
 --
@@ -96,7 +96,7 @@ CREATE TABLE public.users (
     email text NOT NULL,
     password text NOT NULL,
     name text NOT NULL,
-    "createdAt" timestamp without time zone DEFAULT now() NOT NULL,
+    "createdAt" timestamp without time zone DEFAULT now() NOT NULL
 );
 
 
