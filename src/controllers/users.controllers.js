@@ -45,7 +45,14 @@ export async function getUserById(req, res) {
       `SELECT * FROM shortens s WHERE s."userId" = $1`,
       [user.id]
     );
-    const userUrls = urlsResult.rows;
+    const userUrls = urlsResult.rows.map((row) => {
+      return {
+        id: row.id,
+        shortUrl: row.shortUrl,
+        url: row.url,
+        visitCount: row.views
+      }
+    });
 
     res.send({
       id: user.id,
@@ -54,7 +61,6 @@ export async function getUserById(req, res) {
       shortenedUrls: userUrls,
     });
   } catch (error) {
-    console.log(error);
     return res.status(500).send(error.message);
   }
 }
