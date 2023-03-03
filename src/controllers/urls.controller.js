@@ -8,15 +8,15 @@ export async function shortenUrl(req, res) {
   const shortUrl = nanoid(8);
 
   try {
-    await db.query(
+    const result = await db.query(
       `
     INSERT INTO shortens(url, "shortUrl", "userId")
-    VALUES ($1, $2, $3)
+    VALUES ($1, $2, $3) RETURNING id
   `,
       [url, shortUrl, id]
     );
 
-    res.status(201).send({ shortUrl });
+    res.status(201).send({ shortUrl, id: result.rows[0].id });
   } catch (error) {
     console.log(error);
     return res.status(500).send(error.message);
@@ -90,7 +90,7 @@ export async function deleteUrl(req, res) {
 
     await db.query("DELETE FROM shortens WHERE id=$1", [id]);
 
-    res.sendStatus(204); 
+    res.sendStatus(204);
   } catch (error) {
     console.log(error);
     return res.status(500).send(error.message);
